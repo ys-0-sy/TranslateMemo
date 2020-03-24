@@ -17,25 +17,30 @@ class testApi: ObservableObject {
   }
   
   func testApi()  {
-    AF.request("https://en.wikipedia.org/w/api.php",
-                 method: .get,
-                 parameters: [
-                  "action": "query",
-                  "format": "json",
-                  "meta": "tokens",
-                  "type": "login"]).responseData {response in
-                    if let value = response.value {
-                      let json = JSON(value)
-                      if let logintoken = json["query"]["tokens"]["logintoken"].string {
-                        debugPrint(logintoken)
-                        self.responseString = logintoken
-                      } else {
-                        self.responseString = "json parse error"
-                    }
-                      
-                    } else {
-                      self.responseString = "request Error"
-                    }
+    var apiKey = env["GOOGLE_API_KEY"] as? String {
+        AF.request("https://translation.googleapis.com/language/translate/v2",
+                     method: .post,
+                     parameters: [
+                      "action": "query",
+                      "format": "json",
+                      "meta": "tokens",
+                      "type": "login"]).responseData {response in
+                        if let value = response.value {
+                          let json = JSON(value)
+                          if let logintoken = json["query"]["tokens"]["logintoken"].string {
+                            debugPrint(logintoken)
+                            self.responseString = logintoken
+                          } else {
+                            self.responseString = "json parse error"
+                        }
+                          
+                        } else {
+                          self.responseString = "request Error"
+                        }
+        }
+    } else do {
+        print("Environment Value error")
     }
+    
   }
 }
