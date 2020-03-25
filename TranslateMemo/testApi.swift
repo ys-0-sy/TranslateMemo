@@ -12,35 +12,37 @@ import SwiftyJSON
 
 class testApi: ObservableObject {
   @Published var responseString: String = "Initializing..."
+  
   init(){
-    testApi()
+    testApi(rawString: "")
   }
   
-  func testApi()  {
-    var apiKey = env["GOOGLE_API_KEY"] as? String {
+  func testApi(rawString:String)  {
+    if let keyString = Bundle.main.object(forInfoDictionaryKey: "GoogleAPIKey") as? String, let googleAPIKey = KeyManager().getValue(key: keyString) as? String {
         AF.request("https://translation.googleapis.com/language/translate/v2",
-                     method: .post,
-                     parameters: [
-                      "action": "query",
-                      "format": "json",
-                      "meta": "tokens",
-                      "type": "login"]).responseData {response in
-                        if let value = response.value {
-                          let json = JSON(value)
-                          if let logintoken = json["query"]["tokens"]["logintoken"].string {
-                            debugPrint(logintoken)
-                            self.responseString = logintoken
-                          } else {
-                            self.responseString = "json parse error"
-                        }
-                          
+                   method: .post,
+                   parameters: [
+                    "q": rawString,
+                    "target": "ja",
+                    "key": googleAPIKey]).responseData {response in
+                      if let value = response.value {
+                        let json = JSON(value)
+                        print(json)
+                        if let translatedText = json["data"]["translations"][0]["translatedText"].string {
+                          debugPrint(translatedText)
+                          self.responseString = translatedText
                         } else {
-                          self.responseString = "request Error"
-                        }
-        }
-    } else do {
-        print("Environment Value error")
+                          self.responseString = "json parse error"
+                      }
+                        
+                      } else {
+                        self.responseString = "request Error"
+                      }
+      }
+    } else {
+      print("Environment error")
     }
+
     
   }
 }
