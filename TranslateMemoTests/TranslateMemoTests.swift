@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import Memolation
+@testable import TranslateMemo
 
 class TranslateMemoTests: XCTestCase {
 

@@ -40,7 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5B549C762427900B00852B08 /* Memolation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memolation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B549C762427900B00852B08 /* TranslateMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TranslateMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B549C792427900B00852B08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B549C7B2427900B00852B08 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5B549C7D2427900B00852B08 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -102,7 +102,7 @@
 		5B549C772427900B00852B08 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5B549C762427900B00852B08 /* Memolation.app */,
+				5B549C762427900B00852B08 /* TranslateMemo.app */,
 				5B549C8C2427900F00852B08 /* TranslateMemoTests.xctest */,
 				5B549C972427900F00852B08 /* TranslateMemoUITests.xctest */,
 			);
@@ -179,7 +179,7 @@
 				5B549CAF24285B3800852B08 /* SwiftyJSON */,
 			);
 			productName = TranslateMemo;
-			productReference = 5B549C762427900B00852B08 /* Memolation.app */;
+			productReference = 5B549C762427900B00852B08 /* TranslateMemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 		5B549C8B2427900F00852B08 /* TranslateMemoTests */ = {
@@ -482,8 +482,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ys-0-sy.memolation";
-				PRODUCT_NAME = Memolation;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ys-0-sy.Translatememo";
+				PRODUCT_NAME = TranslateMemo;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -502,8 +502,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ys-0-sy.memolation";
-				PRODUCT_NAME = Memolation;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ys-0-sy.Translatememo";
+				PRODUCT_NAME = TranslateMemo;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
