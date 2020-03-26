@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5B549C752427900B00852B08"
-               BuildableName = "Memolation.app"
+               BuildableName = "TranslateMemo.app"
                BlueprintName = "TranslateMemo"
                ReferencedContainer = "container:TranslateMemo.xcodeproj">
             </BuildableReference>
@@ -65,7 +65,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5B549C752427900B00852B08"
-            BuildableName = "Memolation.app"
+            BuildableName = "TranslateMemo.app"
             BlueprintName = "TranslateMemo"
             ReferencedContainer = "container:TranslateMemo.xcodeproj">
          </BuildableReference>
@@ -82,7 +82,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5B549C752427900B00852B08"
-            BuildableName = "Memolation.app"
+            BuildableName = "TranslateMemo.app"
             BlueprintName = "TranslateMemo"
             ReferencedContainer = "container:TranslateMemo.xcodeproj">
          </BuildableReference>
